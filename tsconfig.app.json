@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "noImplicitAny": false,
+    "noImplicitReturns": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "outDir": "../../dist/out-tsc",
+    "strict": false,
+    "types": ["node"]
+  },
+  "exclude": ["jest.config.ts"],
+  "extends": "./tsconfig.base.json"
+}

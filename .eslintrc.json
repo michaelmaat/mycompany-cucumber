@@ -1,0 +1,410 @@
+{
+  "ignorePatterns": ["package-lock.json", "!.storybook"],
+  "overrides": [
+    {
+      "extends": ["plugin:@nrwl/nx/javascript"],
+      "files": ["*.js"]
+    },
+    {
+      "extends": ["plugin:@nrwl/nx/typescript", "plugin:@nrwl/nx/angular"],
+      "files": ["*.ts"],
+      "plugins": [
+        "eslint-plugin-import",
+        "@angular-eslint/eslint-plugin",
+        "@typescript-eslint"
+      ],
+      "rules": {
+        "@angular-eslint/component-class-suffix": [
+          "error",
+          {
+            "suffixes": ["Component", "Control", "Layout", "Page"]
+          }
+        ],
+        "@angular-eslint/component-selector": [
+          "error",
+          {
+            "prefix": "mycompany",
+            "style": "kebab-case",
+            "type": "element"
+          }
+        ],
+        "@angular-eslint/directive-selector": [
+          "error",
+          {
+            "prefix": "mycompany",
+            "style": "camelCase",
+            "type": "attribute"
+          }
+        ],
+        "@angular-eslint/no-conflicting-lifecycle": "error",
+        "@angular-eslint/no-host-metadata-property": "error",
+        "@angular-eslint/no-input-rename": "error",
+        "@angular-eslint/no-inputs-metadata-property": "error",
+        "@angular-eslint/no-output-native": "error",
+        "@angular-eslint/no-output-on-prefix": "error",
+        "@angular-eslint/no-output-rename": "error",
+        "@angular-eslint/no-outputs-metadata-property": "error",
+        "@angular-eslint/use-lifecycle-interface": "error",
+        "@angular-eslint/use-pipe-transform-interface": "error",
+        "@typescript-eslint/consistent-type-definitions": "error",
+        "@typescript-eslint/explicit-function-return-type": "error",
+        "@typescript-eslint/member-ordering": [
+          "warn",
+          {
+            "default": {
+              "memberTypes": [
+                // Index signature
+                "signature",
+
+                // Fields
+                "public-static-field",
+                "protected-static-field",
+                "private-static-field",
+
+                "public-decorated-field",
+                "protected-decorated-field",
+                "private-decorated-field",
+
+                "public-instance-field",
+                "protected-instance-field",
+                "private-instance-field",
+
+                "public-abstract-field",
+                "protected-abstract-field",
+                "private-abstract-field",
+
+                "public-field",
+                "protected-field",
+                "private-field",
+
+                "static-field",
+                "instance-field",
+                "abstract-field",
+
+                "decorated-field",
+
+                "field",
+
+                // Constructors
+                "public-constructor",
+                "protected-constructor",
+                "private-constructor",
+
+                "constructor",
+
+                // Getters and Setters
+                ["public-static-get", "public-static-set"],
+                ["protected-static-get", "protected-static-set"],
+                ["private-static-get", "private-static-set"],
+
+                ["public-decorated-get", "public-decorated-set"],
+                ["protected-decorated-get", "protected-decorated-set"],
+                ["private-decorated-get", "private-decorated-set"],
+
+                ["public-instance-get", "public-instance-set"],
+                ["protected-instance-get", "protected-instance-set"],
+                ["private-instance-get", "private-instance-set"],
+
+                ["public-abstract-get", "public-abstract-set"],
+                ["protected-abstract-get", "protected-abstract-set"],
+                ["private-abstract-get", "private-abstract-set"],
+
+                ["public-get", "public-set"],
+                ["protected-get", "protected-set"],
+                ["private-get", "private-set"],
+
+                ["static-get", "static-set"],
+                ["instance-get", "instance-set"],
+                ["abstract-get", "abstract-set"],
+
+                ["decorated-get", "decorated-set"],
+
+                ["get", "set"],
+
+                // Methods
+                "public-static-method",
+                "protected-static-method",
+                "private-static-method",
+
+                "public-decorated-method",
+                "protected-decorated-method",
+                "private-decorated-method",
+
+                "public-instance-method",
+                "protected-instance-method",
+                "private-instance-method",
+
+                "public-abstract-method",
+                "protected-abstract-method",
+                "private-abstract-method",
+
+                "public-method",
+                "protected-method",
+                "private-method",
+
+                "static-method",
+                "instance-method",
+                "abstract-method",
+
+                "decorated-method",
+
+                "method"
+              ],
+              "order": "alphabetically-case-insensitive"
+            }
+          }
+        ],
+        "@typescript-eslint/naming-convention": [
+          "error",
+          {
+            "format": ["strictCamelCase"],
+            "leadingUnderscore": "allow",
+            "selector": "default",
+            "trailingUnderscore": "allow"
+          },
+
+          {
+            "format": ["strictCamelCase"],
+            "leadingUnderscore": "allow",
+            "selector": "variable",
+            "trailingUnderscore": "allow"
+          },
+
+          {
+            "format": ["PascalCase"],
+            "selector": "typeLike"
+          },
+          {
+            "format": ["PascalCase"],
+            "prefix": ["T"],
+            "selector": "typeAlias"
+          },
+          {
+            "format": ["PascalCase"],
+            "prefix": ["I"],
+            "selector": "interface"
+          }
+        ],
+        "@typescript-eslint/no-empty-interface": [
+          "error",
+          {
+            "allowSingleExtends": true
+          }
+        ],
+        "@typescript-eslint/no-explicit-any": "error",
+        "@typescript-eslint/no-inferrable-types": [
+          "error",
+          {
+            "ignoreParameters": true
+          }
+        ],
+        "@typescript-eslint/no-misused-new": "error",
+        "@typescript-eslint/no-non-null-assertion": "error",
+        "@typescript-eslint/no-shadow": [
+          "error",
+          {
+            "hoist": "all"
+          }
+        ],
+        "@typescript-eslint/no-unused-expressions": "error",
+        "@typescript-eslint/no-unused-vars": "error",
+        "@typescript-eslint/prefer-function-type": "error",
+        "@typescript-eslint/unified-signatures": "error"
+      }
+    },
+    {
+      "files": ["*.ts", "*.js"],
+      "rules": {
+        "@nrwl/nx/enforce-module-boundaries": [
+          "error",
+          {
+            "allow": [],
+            "depConstraints": [
+              {
+                "onlyDependOnLibsWithTags": ["*"],
+                "sourceTag": "*"
+              }
+            ],
+            "enforceBuildableLibDependency": true
+          }
+        ],
+        "arrow-body-style": "error",
+        "comma-style": ["error", "last"],
+        "complexity": "error",
+        "constructor-super": "error",
+        "eqeqeq": ["error", "smart"],
+        "guard-for-in": "error",
+        "import/no-deprecated": "error",
+        "lines-between-class-members": [
+          "error",
+          "always",
+          { "exceptAfterSingleLine": true }
+        ],
+        "max-depth": "error",
+        "max-lines": "warn",
+        "max-lines-per-function": "warn",
+        "max-nested-callbacks": "error",
+        "max-params": "warn",
+        "max-statements": "warn",
+        "no-bitwise": "error",
+        "no-caller": "error",
+        "no-console": "error",
+        "no-debugger": "error",
+        "no-eval": "error",
+        "no-fallthrough": "error",
+        "no-multi-spaces": "error",
+        "no-multiple-empty-lines": "error",
+        "no-new-wrappers": "error",
+        // Allow hasOwnProperty
+        "no-prototype-builtins": "off",
+        "no-restricted-imports": ["error", "rxjs/Rx"],
+        "no-throw-literal": "error",
+        "no-undef-init": "error",
+        "no-var": "error",
+        "padding-line-between-statements": [
+          "error",
+          // Always require blank lines after directive (like 'use-strict'), except between directives
+          { "blankLine": "always", "next": "*", "prev": "directive" },
+          { "blankLine": "any", "next": "directive", "prev": "directive" },
+          // Always require blank lines after import, except between imports
+          { "blankLine": "always", "next": "*", "prev": "import" },
+          { "blankLine": "any", "next": "import", "prev": "import" },
+          // Always require blank lines before and after every sequence of variable declarations and export
+          {
+            "blankLine": "always",
+            "next": ["const", "let", "var", "export"],
+            "prev": "*"
+          },
+          {
+            "blankLine": "always",
+            "next": "*",
+            "prev": ["const", "let", "var", "export"]
+          },
+          {
+            "blankLine": "any",
+            "next": ["const", "let", "var", "export"],
+            "prev": ["const", "let", "var", "export"]
+          },
+          // Always require blank lines before and after class declaration, if, do/while, switch, try
+          {
+            "blankLine": "always",
+            "next": ["if", "class", "for", "do", "while", "switch", "try"],
+            "prev": "*"
+          },
+          {
+            "blankLine": "always",
+            "next": "*",
+            "prev": ["if", "class", "for", "do", "while", "switch", "try"]
+          },
+          // Always require blank lines before return statements
+          { "blankLine": "always", "next": "return", "prev": "*" }
+        ],
+        "prefer-const": "error",
+        "radix": "error",
+        "sort-keys": "error",
+        "sort-vars": "error"
+      }
+    },
+    {
+      "extends": ["plugin:@nrwl/nx/angular-template"],
+      "files": ["*.html"],
+      "plugins": ["@angular-eslint/eslint-plugin-template"],
+      "rules": {
+        "@angular-eslint/template/banana-in-box": "error",
+        "@angular-eslint/template/eqeqeq": "error",
+        "@angular-eslint/template/no-negated-async": "error"
+      }
+    },
+    {
+      "files": ["*.model.ts"],
+      "rules": {
+        "max-params": "off"
+      }
+    },
+    {
+      "extends": ["plugin:cypress/recommended"],
+      "files": ["apps/*-e2e/**/*.ts"],
+      "rules": {
+        "cypress/require-data-selectors": "error"
+      }
+    },
+    {
+      "files": ["apps/*-e2e/src/e2e/*.ts"],
+      "rules": {
+        // Set to error since we can control all (new) Cypress E2E code. 50 will match the max length of functions, so after that we can split it
+        "max-statements": ["error", 50]
+      }
+    },
+    {
+      "extends": ["plugin:jsonc/recommended-with-jsonc"],
+      "files": ["*.json"],
+      "rules": {
+        "jsonc/sort-array-values": [
+          "error",
+          {
+            // Hits the files property
+            "order": { "type": "asc" },
+            "pathPattern": "^files$"
+          },
+          {
+            // Hits the keywords property
+            "order": [
+              "eslint",
+              "eslintplugin",
+              "eslint-plugin",
+              {
+                // Fallback order
+                "order": { "type": "asc" }
+              }
+            ],
+            "pathPattern": "^keywords$"
+          }
+        ],
+        "jsonc/sort-keys": "error"
+      }
+    },
+    {
+      "extends": ["plugin:jest/recommended"],
+      "files": ["*.spec.ts"],
+      "plugins": ["jest"],
+      // Match max (file) lines default to support long wrapper 'describe' functions
+      "rules": {
+        "max-lines": "off",
+        "max-lines-per-function": "off",
+        "max-statements": "off"
+      }
+    },
+    {
+      "files": ["libs/**/deprecated/**/*.ts"],
+      "rules": {
+        "@typescript-eslint/member-ordering": "off",
+        "max-lines": "off",
+        "max-lines-per-function": "off",
+        "max-params": "off",
+        "max-statements": "off"
+      }
+    },
+    {
+      "files": [
+        "libs/shared/nx/generators.json",
+        "libs/shared/nx/executors.json"
+      ],
+      "parser": "jsonc-eslint-parser",
+      "rules": {
+        "@nrwl/nx/nx-plugin-checks": "error"
+      }
+    },
+    {
+      "files": ["cdk/**"],
+      "rules": {
+        "@typescript-eslint/member-ordering": "off",
+        "@typescript-eslint/naming-convention": "off",
+        "jsonc/sort-keys": "off",
+        "padding-line-between-statements": "off",
+        "sort-keys": "off"
+      }
+    }
+  ],
+  "plugins": ["@nrwl/nx"],
+  "root": true
+}

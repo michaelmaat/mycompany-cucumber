@@ -1,0 +1,49 @@
+{
+  "angularCompilerOptions": {
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
+    "strictTemplates": true
+  },
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": ".",
+    "declaration": false,
+    "emitDecoratorMetadata": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "forceConsistentCasingInFileNames": true,
+    "importHelpers": true,
+    "lib": ["es2020", "dom"],
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "paths": {
+      "@mycompany/shared/cypress/commands/util-data-cy": [
+        "libs/shared/cypress/commands/util-data-cy/src/index.ts"
+      ],
+      "@mycompany/shared/cypress/config-options/util-cypress": [
+        "libs/shared/cypress/config-options/util-cypress/src/index.ts"
+      ],
+      "@mycompany/shared/cypress/config-options/util-webpack": [
+        "libs/shared/cypress/config-options/util-webpack/src/index.ts"
+      ],
+      "@mycompany/shared/cypress/helpers/util-wait": [
+        "libs/shared/cypress/helpers/util-wait/src/index.ts"
+      ]
+    },
+    "resolveJsonModule": true,
+    "rootDir": ".",
+    "skipDefaultLibCheck": true,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "strict": true,
+    "target": "es2020",
+    "typeRoots": ["node_modules/@types"]
+  },
+  "exclude": ["node_modules", "tmp"]
+}

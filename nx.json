@@ -1,0 +1,54 @@
+{
+  "$schema": "./node_modules/nx/schemas/nx-schema.json",
+  "affected": {
+    "defaultBase": "master"
+  },
+  "generators": {
+    "@nrwl/angular:application": {
+      "e2eTestRunner": "cypress",
+      "linter": "eslint",
+      "strict": true,
+      "style": "scss",
+      "unitTestRunner": "jest"
+    },
+    "@nrwl/angular:component": {
+      "style": "scss"
+    },
+    "@nrwl/angular:library": {
+      "linter": "eslint",
+      "unitTestRunner": "jest"
+    },
+    "@schematics/angular:component": {
+      "style": "scss"
+    }
+  },
+  "implicitDependencies": {
+    "nx.json": "*",
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    "tsconfig.base.json": "*"
+  },
+  "npmScope": "mycompany",
+  "targetDefaults": {
+    "build": {
+      "dependsOn": ["^build"]
+    }
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "options": {
+        "cacheableOperations": [
+          "build",
+          "lint",
+          "test",
+          "e2e",
+          "build-storybook"
+        ],
+        "parallel": 1
+      },
+      "runner": "nx/tasks-runners/default"
+    }
+  }
+}

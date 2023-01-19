@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "noImplicitAny": false,
+    "noImplicitReturns": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "outDir": "../../dist/out-tsc",
+    "sourceMap": false,
+    "strict": false,
+    "types": ["cypress", "node"]
+  },
+  "extends": "./tsconfig.base.json"
+}

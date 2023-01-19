@@ -1,0 +1,31 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/admin-e2e/src",
+  "tags": [],
+  "targets": {
+    "e2e": {
+      "configurations": {
+        "accp": {
+          "devServerTarget": "admin:serve:accp"
+        },
+        "test": {
+          "devServerTarget": "admin:serve:test"
+        }
+      },
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/admin-e2e/cypress.config.ts",
+        "devServerTarget": "",
+        "testingType": "e2e",
+        "tsConfig": "apps/admin-e2e/tsconfig.json"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["apps/admin-e2e/**/*.{js,ts,json}"]
+      }
+    }
+  }
+}

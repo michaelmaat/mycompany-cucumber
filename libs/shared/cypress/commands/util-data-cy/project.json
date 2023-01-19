@@ -1,0 +1,16 @@
+{
+  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+  "prefix": "mycompany",
+  "projectType": "library",
+  "sourceRoot": "libs/shared/cypress/commands/util-data-cy/src",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/shared/cypress/commands/util-data-cy/**/*.{js,ts,json,html}"
+        ]
+      }
+    }
+  }
+}

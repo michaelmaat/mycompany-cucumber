@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "noImplicitAny": false,
+    "noImplicitReturns": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "outDir": "./dist/out-tsc",
+    "strict": false,
+    "types": ["jest", "node"]
+  },
+  "extends": "./tsconfig.base.json",
+  "files": ["./test-setup.ts"],
+  "include": ["jest.config.ts", "**/*.test.ts", "**/*.spec.ts", "**/*.d.ts"]
+}
