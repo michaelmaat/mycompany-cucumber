@@ -2,7 +2,7 @@
 /* eslint-disable @nrwl/nx/enforce-module-boundaries */
 
 import { When } from '@badeball/cypress-cucumber-preprocessor';
-import { WaitHelper } from '../../../../libs/shared/cypress/helpers/util-wait/src/lib/cypress-wait.helper';
+import { WaitHelper } from '@mycompany/shared/cypress/helpers/util-wait';
 
 import { surgeons } from '../fixtures/surgeons';
 
