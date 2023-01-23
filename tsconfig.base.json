@@ -34,6 +34,12 @@
       ],
       "@mycompany/shared/cypress/helpers/util-wait": [
         "libs/shared/cypress/helpers/util-wait/src/index.ts"
+      ],
+      "@mycompany/surgeon/data-access-model": [
+        "libs/surgeon/data-access-model/src/index.ts"
+      ],
+      "@mycompany/surgeon/data-access-typing": [
+        "libs/surgeon/data-access-typing/src/index.ts"
       ]
     },
     "resolveJsonModule": true,

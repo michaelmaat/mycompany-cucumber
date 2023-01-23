@@ -5,7 +5,9 @@
     "shared-cypress-commands-util-data-cy": "libs/shared/cypress/commands/util-data-cy",
     "shared-cypress-config-options-util-cypress": "libs/shared/cypress/config-options/util-cypress",
     "shared-cypress-config-options-util-webpack": "libs/shared/cypress/config-options/util-webpack",
-    "shared-cypress-helpers-util-wait": "libs/shared/cypress/helpers/util-wait"
+    "shared-cypress-helpers-util-wait": "libs/shared/cypress/helpers/util-wait",
+    "surgeon-data-access-model": "libs/surgeon/data-access-model",
+    "surgeon-data-access-typing": "libs/surgeon/data-access-typing"
   },
   "version": 2
 }

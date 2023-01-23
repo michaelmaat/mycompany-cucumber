@@ -1,0 +1,16 @@
+{
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "prefix": "mycompany",
+  "projectType": "library",
+  "sourceRoot": "libs/surgeon/data-access-typing/src",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/surgeon/data-access-typing/**/*.{js,ts,json,html}"
+        ]
+      }
+    }
+  }
+}
